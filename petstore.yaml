@@ -39,39 +39,6 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/Error'
-    post:
-      summary: Create a pet
-      operationId: createPets
-      tags:
-        - pets
-      responses:
-        "201":
-          description: Null response
-        default:
-          description: unexpected error
-          schema:
-            $ref: '#/definitions/Error'
-  /pets/{petId}:
-    get:
-      summary: Info for a specific pet
-      operationId: showPetById
-      tags:
-        - pets
-      parameters:
-        - name: petId
-          in: path
-          required: true
-          description: The id of the pet to retrieve
-          type: string
-      responses:
-        "200":
-          description: Expected response to a valid request
-          schema:
-            $ref: '#/definitions/Pets'
-        default:
-          description: unexpected error
-          schema:
-            $ref: '#/definitions/Error'
 definitions:
   Pet:
     type: "object"
